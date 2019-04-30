@@ -1,0 +1,9 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://C:/Users/ederelfs/git/labs/sigadaer-labs/microservices/Coderef/delivery-config-server-repository/delivery-configs
