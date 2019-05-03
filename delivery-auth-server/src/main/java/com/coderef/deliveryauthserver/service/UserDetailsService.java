@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService{
+public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 	
 	UserRepository userRepository;
 	
@@ -34,7 +34,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 		this.userRepository = userRepository;
 	}
 	
-	private Collection<GrantedAuthority> getGrantedAuthorities(User user){
+	private Collection<GrantedAuthority> getGrantedAuthorities(User user) {
     	Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         for (Authority authority : user.getAuthorities()) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getName());
